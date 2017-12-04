@@ -1,0 +1,120 @@
+{
+  "contract_name": "Lockable",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "acceptOwnership",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_untilBlock",
+          "type": "uint256"
+        },
+        {
+          "name": "_reason",
+          "type": "string"
+        }
+      ],
+      "name": "lockUntil",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "newOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "lockedUntilBlock",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_untilBlock",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "_reason",
+          "type": "string"
+        }
+      ],
+      "name": "ContractLocked",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_prevOwner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnerUpdate",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x60606040525b60008054600160a060020a03191633600160a060020a03161790555b5b6103a7806100316000396000f300606060405236156100755763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166379ba5097811461007a5780638da5cb5b1461008f578063b26eafe4146100be578063d4ee1d9014610116578063d8162db714610145578063f2fde38b1461016a575b600080fd5b341561008557600080fd5b61008d61018b565b005b341561009a57600080fd5b6100a2610233565b604051600160a060020a03909116815260200160405180910390f35b34156100c957600080fd5b61008d600480359060446024803590810190830135806020601f8201819004810201604051908101604052818152929190602084018383808284375094965061024295505050505050565b005b341561012157600080fd5b6100a2610306565b604051600160a060020a03909116815260200160405180910390f35b341561015057600080fd5b610158610315565b60405190815260200160405180910390f35b341561017557600080fd5b61008d600160a060020a036004351661031b565b005b60015433600160a060020a039081169116146101a657600080fd5b6000546001547f343765429aea5a34b3ff6a3785a98a5abb2597aca87bfbb58632c173d585373a91600160a060020a039081169116604051600160a060020a039283168152911660208201526040908101905180910390a1600180546000805473ffffffffffffffffffffffffffffffffffffffff19908116600160a060020a038416179091551690555b565b600054600160a060020a031681565b60005433600160a060020a0390811691161461025a57fe5b60028290557f2c1bcb4f0c190ca2fcb1bb54323892ec36606ef7958dc7a4e1dc599fe2c1c0f0828260405182815260406020820181815290820183818151815260200191508051906020019080838360005b838110156102c55780820151818401525b6020016102ac565b50505050905090810190601f1680156102f25780820380516001836020036101000a031916815260200191505b50935050505060405180910390a15b5b5050565b600154600160a060020a031681565b60025481565b60005433600160a060020a0390811691161461033357fe5b600054600160a060020a038281169116141561034e57600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0383161790555b5b505600a165627a7a723058204c4ad17b7ee412280dd63ca7e6e32f79281c738a792f723386168be48aff8fb50029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1512396685874
+}
