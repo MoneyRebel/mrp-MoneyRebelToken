@@ -14,7 +14,7 @@ contract ERC20Token is ERC20TokenInterface, SafeMath, Owned, Lockable {
     string public symbol;
     uint8 public decimals;
 
-    uint maximumSupply;
+    bool minitingEnabled;
 
     /* Private variables of the token */
     uint256 supply = 0;
@@ -72,14 +72,16 @@ contract ERC20Token is ERC20TokenInterface, SafeMath, Owned, Lockable {
         return allowances[_owner][_spender];
     }
 
+    /* Owner can mint new tokens while minting is enabled */
     function mint(address _to, uint256 _amount) onlyOwner public {
-        require(supply + _amount <= maximumSupply);
-        supply = safeAdd(supply, _amount);
-        balances[_to] = safeAdd(balances[_to], _amount);
-        Mint(_to, _amount);
-        Transfer(0x0, _to, _amount);
+        require(minitingEnabled);                       // Check if minting is enabled
+        supply = safeAdd(supply, _amount);              // Add new token count to totalSupply
+        balances[_to] = safeAdd(balances[_to], _amount);// Add tokens to recipients wallet
+        Mint(_to, _amount);                             // Raise event that anyone can see
+        Transfer(0x0, _to, _amount);                    // Raise transfer event
     }
 
+    /* Anyone can destroy tokens on their walllet */
     function burn(uint _amount) public {
         balances[msg.sender] = safeSub(balanceOf(msg.sender), _amount);
         supply = safeSub(supply, _amount);
@@ -87,11 +89,18 @@ contract ERC20Token is ERC20TokenInterface, SafeMath, Owned, Lockable {
         Transfer(msg.sender, 0x0, _amount);
     }
 
+    /* Owner can salvage tokens that were accidentally sent to the smart contract address */
     function salvageTokensFromContract(address _tokenAddress, address _to, uint _amount) onlyOwner public {
         ERC20TokenInterface(_tokenAddress).transfer(_to, _amount);
     }
     
+    /* Owner can wipe all the data from the contract and disable all the methods */
     function killContract() onlyOwner public {
         selfdestruct(owner);
+    }
+
+    /* Owner can disable minting forever and ever */
+    function disableMinting() onlyOwner public {
+        minitingEnabled = false;
     }
 }

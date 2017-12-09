@@ -10,7 +10,7 @@ contract MrpToken is ERC20Token {
     name = "MrpToken";
     symbol = "MRP";
     decimals = 18;
-    maximumSupply = 10 * 10**18;
-    lockFromSelf(4352535, "Lock before crowdsale starts");
+    minitingEnabled = true;
+    lockFromSelf(13370000, "Lock before crowdsale starts");
   }
 }
