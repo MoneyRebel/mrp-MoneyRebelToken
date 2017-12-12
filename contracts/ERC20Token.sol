@@ -14,7 +14,7 @@ contract ERC20Token is ERC20TokenInterface, SafeMath, Owned, Lockable {
     string public symbol;
     uint8 public decimals;
 
-    bool minitingEnabled;
+    bool mintingEnabled;
 
     /* Private variables of the token */
     uint256 supply = 0;
@@ -74,7 +74,7 @@ contract ERC20Token is ERC20TokenInterface, SafeMath, Owned, Lockable {
 
     /* Owner can mint new tokens while minting is enabled */
     function mint(address _to, uint256 _amount) onlyOwner public {
-        require(minitingEnabled);                       // Check if minting is enabled
+        require(mintingEnabled);                       // Check if minting is enabled
         supply = safeAdd(supply, _amount);              // Add new token count to totalSupply
         balances[_to] = safeAdd(balances[_to], _amount);// Add tokens to recipients wallet
         Mint(_to, _amount);                             // Raise event that anyone can see
@@ -101,6 +101,6 @@ contract ERC20Token is ERC20TokenInterface, SafeMath, Owned, Lockable {
 
     /* Owner can disable minting forever and ever */
     function disableMinting() onlyOwner public {
-        minitingEnabled = false;
+        mintingEnabled = false;
     }
 }
