@@ -13,15 +13,15 @@ The source code is available on https://github.com/MoneyRebel/mrp-MoneyRebelToke
 
 We will reward bug bounty for bugs found at three levels, according to the severity of the bug discovered. 
 
-1. Critical
+1. Critical:
 We will reward you with a bounty of 10k EUR (in ETH currency, at time of reward transfer)
 Critical bugs include bugs that enable destroying, taking over or stealing the tokens
 
-2. Moderate
+2. Moderate:
 We will reward you with a bounty of 3k EUR (in ETH currency, at time of reward transfer)
 Moderate bugs include bugs that will bring out wrong results of the contract. For example - burning feature of the contract does not burn the tokens or when, by sending MRP tokens, a wrong amount is sent, etc..
 
-3. Low
+3. Low:
 We will reward you with a bounty of 1k EUR (in ETH currency, at time of reward transfer)
 Various small bugs that exist in the code.
 
