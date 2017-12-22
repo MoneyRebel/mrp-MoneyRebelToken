@@ -35,4 +35,4 @@ We reserve the right to decide ourselves the severity of the bug discovered, and
 - Bounty will run until January, 15th 2018
 
 
-For additional information contact us through our Telegram channel https://t.me/moneyrebel or on mail urban@moneyrebel.com
+For additional information contact us through our Telegram channel https://t.me/moneyrebel
