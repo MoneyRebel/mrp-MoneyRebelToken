@@ -1,7 +1,7 @@
 # MoneyRebel bug bounty program
 
 
-The bug bounty program helps us collaborate with the community to improve the security of our smart contracts. 
+The bug bounty program helps us collaborate with the community to improve the security of our smart contract. 
 
 The contract has already been deployed on the kovan ethereum testnet, where you can probe it: 
 https://kovan.etherscan.io/address/0x97d57c21b865ec7c61088d6df8b6ae944ead5bd6
