@@ -1,6 +1,4 @@
-# mrp-MoneyRebelToken
-
-MoneyRebel bug bounty program
+# MoneyRebel bug bounty program
 
 
 The bug bounty program helps us collaborate with the community to improve the security of our smart contracts. 
@@ -30,7 +28,7 @@ Various small bugs that exist in the code.
 
 We reserve the right to decide ourselves the severity of the bug discovered, and at which level we will reward the person who discovers it. 
 
-Basic rules:
+## Basic rules:
 - Bounties go to the first to report on Github
 - Bug must be reported with steps to reproduce and all info needed to fix
 - Non-security critical issues (style issues, gas optimizations) are not eligible
